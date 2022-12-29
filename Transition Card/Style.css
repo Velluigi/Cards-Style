@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+
+*
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card1
+{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(135deg,#ffbf00,#ee0979);
+}
+
+.card1 img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 270px;
+    transition: 0.5s;
+}
+
+.card1:hover img
+{
+    left: 80%;
+    height: 370px;
+}
+
+.card1 .content {
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.card1:hover .content {
+    left: 0%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card1 .content h2 {
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    line-height: 1em;
+}
+.card1 .content p {
+    color: #ffff;
+}
+.card1 .content a {
+    position: relative;
+    display: inline-block;
+    color: #111;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+@media(max-width: 991px)
+ { 
+    .card1 {
+        position: relative;
+        width: auto;
+        max-width: 600px;
+        transition: 0.5s;
+        align-items: flex-start;
+    }
+    
+    .card1:hover{
+        height: 600px;
+    }
+
+    .card1:hover img {
+        left: 50%;
+        height: 350px;
+    }
+
+    .card1 .content {
+        position:relative ;
+        width: 100%;
+        left: 0;
+        padding: 40px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+
+
+
+ }
+
+ @media(max-width:420px) {
+    .card1 .content {
+        padding: 30px;
+    }
+    .card1:hover img {
+        height: 300px;
+    }
+ }
