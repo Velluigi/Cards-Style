@@ -1,0 +1,131 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubutntu', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #371f3a;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #6b3950;
+    margin: 30px;
+    border-radius: 20px;
+    border-bottom-left-radius: 160px;
+    border-bottom-right-radius: 160px;
+    box-shadow: 0 15px 0 white,
+    inset 0 -15px 0 rgba(255,255,255,0.2),0 45px 0 rgba(0,0,0,0.15);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -140px;
+    left: -40%;
+    width: 100%;
+    height: 120%;
+    background: linear-gradient(90deg,transparent,rgba(255,255,255,0.2));
+    transform: rotate(35deg);
+    pointer-events: none;
+    filter: blur(5px);
+}
+
+.card:nth-child(1)
+{
+    background: linear-gradient(to bottom, rgb(226, 233, 21), rgb(172, 29, 139));
+}
+.card:nth-child(2)
+{
+    background: linear-gradient(to bottom, rgb(56, 233, 21), rgb(165, 172, 29));
+}
+.card:nth-child(3)
+{
+    background: linear-gradient(to bottom, rgb(21, 95, 233), rgb(29, 172, 146));
+}
+
+.icon {
+    position: relative;
+    width: 140px;
+    height: 120px;
+    background: #371f3a;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 15px 0 rgba(0,0,0,0.15),
+    inset 0 -15px 0 rgba(0,0,0,0.15);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.icon::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-top-right-radius: 50px;
+    box-shadow: 15px -15px 0 15px  #371f3a;
+}
+.icon::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-top-left-radius: 50px;
+    box-shadow: -15px -15px 0 15px  #371f3a;
+}
+
+.icon ion-icon {
+    color: white;
+    position: relative;
+    font-size: 5em;
+    margin-top: 20px;
+    --ionicon-stroke-width: 24px;
+}
+
+
+.content {
+    position: absolute;
+    width: 100%;
+    padding: 30px;
+    padding-top: 140px;
+    text-align: center;
+}
+.content h2 {
+    font-size: 1.75em;
+    color: white;
+    margin-bottom: 10px ;
+}
+
+.content p {
+    color: white;
+    line-height: 1.5em;
+}
